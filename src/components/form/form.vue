@@ -96,15 +96,18 @@
                             if (errors) {
                                 valid = false;
                             }
-                            if (++count === this.fields.length) {
-                                // all finish
-                                resolve(valid);
-                                if (typeof callback === 'function') {
-                                    callback(valid);
-                                }
-                            }
+
+                            ++count;
                         });
                     });
+
+                    if (count === this.fields.length) {
+                        // all finish
+                        resolve(valid);
+                        if (typeof callback === 'function') {
+                            callback(valid);
+                        }
+                    }
                 });
             },
             validateField(prop, cb) {

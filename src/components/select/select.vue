@@ -439,7 +439,7 @@
                     } else {
                         // ignore option if not passing filter
                         if (this.filterQueryChange) {
-                            const optionPassesFilter = this.filterable ? this.validateOption(cOptions) : option;
+                            const optionPassesFilter = this.filterable && !this.remote ? this.validateOption(cOptions) : option;
                             if (!optionPassesFilter) continue;
                         }
 
