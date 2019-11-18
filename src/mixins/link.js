@@ -28,7 +28,7 @@ export default {
             if (type !== 'string') {
                 return null;
             }
-            if (this.to.includes('//')) {
+            if (this.to.indexOf('//') > -1) {
                 /* Absolute URL, we do not need to route this */
                 return this.to;
             }
