@@ -1,10 +1,4 @@
-/*eslint-disable*/
-// 把 YYYY-MM-DD 改成了 yyyy-MM-dd
-
-/**
- * Parse or format dates
- * @class fecha
- */
+'use strict';
 var fecha = {};
 var token = /d{1,4}|M{1,4}|yy(?:yy)?|S{1,3}|Do|ZZ|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g;
 var twoDigits = /\d\d?/;
